@@ -15,7 +15,7 @@
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:lottie_rawRes="@raw/medicine_colors1"
-        app:lottie_loop="true"
+
         />
 
 <!--app:lottie_rawRes="@raw/medicine_colors1"  invoca al archivo JSON descargado de lottiefiles-->

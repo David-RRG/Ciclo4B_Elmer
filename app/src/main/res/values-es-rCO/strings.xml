@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MediCare</string>
+    <string name="email_hint">Correo electronico</string>
+    <string name="password_hint">Contraseña</string>
 </resources>

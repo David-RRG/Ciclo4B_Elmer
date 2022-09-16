@@ -1,6 +1,7 @@
 package com.example.app_medicina //yes
 
 import android.animation.Animator
+import android.content.Intent
 
 import android.os.Bundle //yes
 import android.util.Log
@@ -31,7 +32,14 @@ class SplashActivity : AppCompatActivity() {
             }
 
             override fun onAnimationEnd(animation: Animator?) {
-                Log.d("Hola","Animacion finalizada")
+                //Log.d("Hola","Animacion finalizada")
+                val intent = Intent(applicationContext,LoginActivity::class.java)
+                    //la forma de navegar a otra pnatalla es crear un intencion explicita,
+                        //indicando la actividad/pantalla a la q queremos navegar
+                startActivity(intent)
+                    //se activa la actividad guardada en la variable correspondiente
+                finish()
+                    //se destruye la app para q se cierre al clickear en el triangulo "atras"
             }
             override fun onAnimationCancel(animation: Animator?) {
             }

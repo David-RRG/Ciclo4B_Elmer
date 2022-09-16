@@ -4,6 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/fondo"
+    >
+<!--android:background -> definir imagen de fondo -->
 
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_logo_alternativo_dentro_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/big_margin"
+        />
+<!--android:id="@+id/login_logo" -> id con el cual se identifica esta imagen (logo)-->
+<!--android:src="@drawable/ic_logo_alternativo_dentro_app" -> se define el archivo.svg del logo-->
+<!--app:layout_constraintEnd_toEndOf="parent" -> el borde izquierdo del icono tiene cierta
+            distancia con respecto al fondo de la actividad_login (parent)-->
+<!--app:layout_constraintStart_toStartOf="parent" -> el borde derecho del icono...-->
+<!--app:layout_constraintTop_toTopOf="parent" -> el borde superior del icono...-->
+<!--android:layout_marginTop="@dimen/big_margin" -> margen para el borde superior del icono-->
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:layout_constraintTop_toBottomOf="@+id/login_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/login_nav"
+
+    />
+<!--app:layout_constraintTop_toBottomOf="@+id/login_logo" -> el borde superior del fragmento
+        se ubica debajo del logo-->
+<!--app:layout_constraintStart_toStartOf="parent" -> el borde izquierdo del fragmento
+        inicia con el borde izquierdo del parent-->
+<!--app:layout_constraintEnd_toEndOf="parent" -> el borde derecho del fragmento
+        inicia con el borde derecho del parent-->
+<!--app:layout_constraintBottom_toBottomOf="parent" el borde inferior del fragmento
+        finaliza con el borde inferior del parent-->
+<!--android:name="androidx.navigation.fragment.NavHostFragment" asi se heredan las
+    propiedades para poder hacer q desde este fragmento se pueda navegar a otro-->
 </androidx.constraintlayout.widget.ConstraintLayout>
